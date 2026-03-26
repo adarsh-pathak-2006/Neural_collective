@@ -1,0 +1,38 @@
+@import url('https://api.fontshare.com/v2/css?f[]=general-sans@400,500,600,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "General Sans", "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-headline: "General Sans", "Space Grotesk", sans-serif;
+  
+  --color-background: #000000;
+  --color-surface: #131313;
+  --color-surface-low: #1b1b1b;
+  --color-surface-high: #2a2a2a;
+  --color-outline-variant: #474747;
+}
+
+@layer base {
+  body {
+    @apply bg-background text-white font-sans antialiased selection:bg-white/30 selection:text-white;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-headline tracking-tight;
+  }
+}
+
+@layer components {
+  .glass-panel {
+    @apply bg-white/5 backdrop-blur-xl border border-white/10;
+  }
+  
+  .glow-text {
+    text-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+  }
+  
+  .glow-streak {
+    @apply bg-linear-to-br from-white to-[#D4D4D4];
+  }
+}
