@@ -81,12 +81,15 @@ async function startServer() {
         try {
           const transporter = nodemailer.createTransport({
             host: process.env.SMTP_HOST,
-            port: parseInt(process.env.SMTP_PORT || "587"),
-            secure: process.env.SMTP_PORT === "465",
+            port: parseInt(process.env.SMTP_PORT || "465"),
+            secure: process.env.SMTP_PORT === "465" || !process.env.SMTP_PORT,
             auth: {
               user: process.env.SMTP_USER,
               pass: process.env.SMTP_PASS,
             },
+            connectionTimeout: 20000, // 20 seconds
+            greetingTimeout: 20000,
+            socketTimeout: 20000,
           });
 
           await transporter.sendMail({
