@@ -1,20 +1,63 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
-</div>
+# Neural Collective: AI College Club Registration Portal
 
-# Run and deploy your AI Studio app
+Welcome to the **Neural Collective**, the campus's premier AI collective for student builders and researchers. This is a high-fidelity, full-stack registration application designed to manage club recruitment, member onboarding, and project collaboration.
 
-This contains everything you need to run your app locally.
+## 🚀 Features
 
-View your app in AI Studio: https://ai.studio/apps/3230bcc1-5dbf-46bb-8a6b-50ce71bd29e2
+- **Futuristic UI**: A cinematic "Digital Void" aesthetic built with React, Tailwind CSS, and Framer Motion.
+- **Full-Stack Integration**: Express.js backend with Vite middleware for seamless development and production serving.
+- **Google Sheets Database**: Automated registration storage using the Google Sheets API.
+- **Email Verification**: Professional verification emails sent via SMTP (Nodemailer).
+- **Member Hub**: A dedicated portal for project documentation and research resources.
+- **Admin Dashboard**: A centralized "Recruitment Center" for managing applications and tracking stats.
 
-## Run Locally
+## 🛠️ Tech Stack
 
-**Prerequisites:**  Node.js
+- **Frontend**: React 18, Vite, Tailwind CSS, Lucide React, Framer Motion.
+- **Backend**: Node.js, Express.js.
+- **Integrations**: Google Spreadsheet API, Google Auth Library, Nodemailer.
+- **Deployment**: Optimized for Cloud Run, Render, or Railway.
+
+## 📂 Directory Structure
+
+```text
+neural-collective/
+├── server.ts               # Express backend & API routes
+├── src/                    # Frontend source code
+│   ├── components/         # Global Layout & Navbar
+│   ├── pages/              # Landing, Join, DevHub, Onboarding, Dashboard, Verify
+│   └── lib/                # Tailwind & Utility helpers
+├── metadata.json           # App metadata & permissions
+└── package.json            # Scripts & Dependencies
+```
+
+## ⚙️ Setup & Installation
+
+1. **Clone the repository**:
+   ```bash
+   git clone https://github.com/your-username/neural-collective.git
+   cd neural-collective
+   ```
+
+2. **Install dependencies**:
+   ```bash
+   npm install
+   ```
+
+3. **Configure Environment Variables**:
+   Create a `.env` file in the root directory and add your credentials (see `.env.example`).
+
+4. **Run in Development**:
+   ```bash
+   npm run dev
+   ```
+
+5. **Build for Production**:
+   ```bash
+   npm run build
+   npm start
+   ```
 
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+---
+Built with ❤️ by the **Neural Collective** Core Team.
