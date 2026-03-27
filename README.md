@@ -52,6 +52,8 @@ neural-collective/
    npm run dev
    ```
 spreadsheet link- https://docs.google.com/spreadsheets/d/13CDC2dgSPrSBUDgMxksuZyBm0g4hkCrYCS_nmA_3akg/edit?usp=sharing
+
+
 5. **Build for Production**:
    ```bash
    npm run build
